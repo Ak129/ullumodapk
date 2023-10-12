@@ -46,7 +46,7 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "👋 Hello <b>{first}</b>\n\n⚡You need to Join Our Channel to Get Your <b>Mod/Pin/File</b>.\n\n⚠️ After Join, Return To File Provider Bot & Click On <b>✅ Done</b> Button To Get Your <b>Mod/Pin/File.</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
