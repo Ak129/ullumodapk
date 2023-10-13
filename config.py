@@ -19,7 +19,7 @@ APP_ID = int(os.environ.get("APP_ID", ""))
 API_HASH = os.environ.get("API_HASH", "")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-100"))
 
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", ""))
@@ -32,12 +32,12 @@ DB_URI = os.environ.get("DATABASE_URL", "")
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-100"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", "👋 <b>Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.</b>")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
@@ -46,7 +46,7 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "👋 Hello <b>{first}</b>\n\n⚡You need to Join Our Channel to Get Your <b>Mod/Pin/File</b>.\n\n⚠️ After Join, Return To File Provider Bot & Click On <b>✅ Done</b> Button To Get Your <b>Mod/Pin/File.</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "👋<b> Hello {first}\n\n⚡You need to Join Our Channel to Get Your Mod/Pin/File.\n\n⚠️ After Join, Return To File Provider Bot & Click On ✅ Done Button To Get Your Mod/Pin/File.</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
