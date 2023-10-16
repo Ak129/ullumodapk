@@ -6,4 +6,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD python3 main.py
+CMD nohup python3 main.py > bot_output.log 2>&1 & 
